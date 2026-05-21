@@ -1,0 +1,9 @@
+flow bin {
+  setup {
+    suite Disconnect_ALL_2 calls empty.EMPTY { }
+  }
+  execute {
+    Disconnect_ALL_2.execute();
+    addBin(1);
+  }
+}

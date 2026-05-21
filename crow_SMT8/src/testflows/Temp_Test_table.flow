@@ -1,0 +1,18 @@
+flow Temp_Test_table {
+  setup {
+    suite Variable_Selection calls empty.EMPTY { }
+    suite Test_table_selection calls empty.EMPTY { }
+  }
+  execute {
+    if(testProgramVariables.getDouble("MANUAL") == 1.0) { }
+    else {
+      Variable_Selection.execute();
+    }
+    if(testProgramVariables.getDouble("TEMP") == 125) {
+      Test_table_selection.execute();
+    }
+    else {
+      testProgramVariables.set("TEMP", 25.0);
+    }
+  }
+}

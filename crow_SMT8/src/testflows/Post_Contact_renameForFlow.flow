@@ -1,0 +1,22 @@
+flow Post_Contact_renameForFlow {
+  setup {
+    suite Post_PintoPin_Leakage calls CROW_ARPS10X0X5_TM.Pin_to_pin_leakage {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite Post_Contact calls CROW_ARPS10X0X5_TM.CONTINUITY {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn1_spec1_set1_Tim_timing_spec_set1);
+    }
+  }
+  execute {
+    Post_PintoPin_Leakage.execute();
+    if(Post_PintoPin_Leakage.pass) { }
+    else {
+      // multi_bin;
+    }
+    Post_Contact.execute();
+    if(Post_Contact.pass) { }
+    else {
+      // multi_bin;
+    }
+  }
+}

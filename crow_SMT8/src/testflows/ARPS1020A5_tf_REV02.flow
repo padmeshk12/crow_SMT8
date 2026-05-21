@@ -1,0 +1,25 @@
+flow ARPS1020A5_tf_REV02 {
+  setup {
+ //   flow Temp_Test_table calls testflows.Temp_Test_table { }
+    flow Continuity_Leakage calls testflows.Continuity_Leakage { }
+//    flow Scan calls testflows.Scan { }
+//    flow Trim_Test calls testflows.Trim_Test { }
+//    flow EFUSE calls testflows.EFUSE { }
+//    flow Post_EFUSE calls testflows.Post_EFUSE { }
+//    flow Threshold_Test calls testflows.Threshold_Test { }
+//    flow Post_Contact_renameForFlow calls testflows.Post_Contact_renameForFlow { }
+//    flow bin calls testflows.bin { }
+  }
+  execute {
+//    Temp_Test_table.bypass = true;
+//    Temp_Test_table.execute();
+    Continuity_Leakage.execute();
+//    Scan.execute();
+//    Trim_Test.execute();
+//    EFUSE.execute();
+//    Post_EFUSE.execute();
+//    Threshold_Test.execute();
+//    Post_Contact_renameForFlow.execute();
+//    bin.execute();
+  }
+}

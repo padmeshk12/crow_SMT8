@@ -1,0 +1,16 @@
+testprogram arps1020a5_tf_rev01 {
+  dutboard = Pogo_ARPS10X0X5__master_cfg_mfh;
+  config = common.myConfig;
+  @Options(mutable = Anytime)
+  var Double MANUAL = 1.0;
+  @Options(mutable = Anytime)
+  var Double TEMP = 25.0;
+  @Options(mutable = Anytime)
+  var Double BLOWN_RETEST = 0.0;
+  testflow PreBind {
+    flow = testflows.preBind;
+  }
+  testflow Main {
+    flow = testflows.ARPS1020A5_tf_REV02;
+  }
+}

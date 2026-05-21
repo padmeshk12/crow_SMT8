@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TPConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="TPConfiguration.xsd">
+    <Item key="system/setup/operating_sequence/default_execution_mode" value="unbursted" />
+</TPConfiguration>

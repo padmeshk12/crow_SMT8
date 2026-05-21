@@ -1,0 +1,153 @@
+body {
+      margin-top: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+      font-size: 9pt;
+      font-family: verdana, arial, sans-serif;
+      color: #000000;
+      background: rgb(255,255,255);
+  }
+
+  table.tab {
+      border-collapse: collapse;
+      border: 1px solid #AAAAAA;
+      font-size: 9pt;
+      font-family: verdana, arial, sans-serif;
+      line-height: 13px;
+      text-align: center;
+      width: 100%;
+      /*text-indent: 10px;*/
+      height: 25px;
+      padding-left: 20px;
+      background: rgb(244,255,244);
+  }
+
+  table.tab th {
+      border: 1px solid #AAAAAA;
+      height: 25px;
+  }
+
+  table.tab td {
+      border: 1px solid #AAAAAA;
+      height: 25px;
+      text-align: left;
+      padding-left: 10px;
+  }
+
+  table.tab tr.alt td {
+      background: #ecf6fc;
+  }
+
+  /*table.tab tr.over td, .tab tr:hover td {
+      background: #eeeeee;
+  }
+
+  table.notab {
+      border-collapse: collapse;
+      border: 0px solid #AAAAAA;
+      font-size: 9pt;
+      font-family: verdana, arial, sans-serif;
+      line-height: 13px;
+      text-align: center;
+      text-indent: 10px;
+      height: 25px;
+      padding-left: 20px;
+  }
+
+  table.notab td {
+      border: 1px solid #AAAAAA;
+      height: 25px;
+  }*/
+
+  .tTitle {
+      font-weight: bold;
+      font-size: 10pt;
+      text-align: left;
+      background-color: RGB(200,200,200);
+  }
+
+  .bold {
+      font-weight: bold;
+  }
+
+  h1 {
+      font-size: 9pt;
+      color: rgb(0,102,153);
+  }
+
+  h3 {
+      color: #006699;
+  }
+
+  h4 {
+      font-family: verdana, arial, sans-serif;
+      font-size: 14pt;
+      line-height: 100%;
+      margin-left: 0px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #006699;
+  }
+
+  #footer {
+      text-align: center;
+  }
+
+  /* ---------- menu start ---------- */
+
+  .menuDiv {
+      font-family: verdana, arial, sans-serif;
+      padding-left: 0px;
+      margin: 0px 0px;
+      font-size: 10pt;
+      line-height: 15pt;
+  }
+
+  .menuDiv li {
+      list-style-type: none;
+      padding: 0px 20px 0px 0px;
+      float: left;
+  }
+
+  /* ---------- menu end ---------- */
+
+  .red {
+      background-color: red;
+  }
+  .yellow {
+      background-color: yellow;
+  }
+  .err {
+      background-color: #FFAAAA;
+  }
+
+
+  .warn {
+      background-color: #FFFFBA;
+  }
+
+
+  .impterr {
+      font-weight: bold;
+      font-size: 10pt;
+      text-align: left;
+      background-color: #FFAAAA;
+  }
+
+
+  .imptwarn {
+      font-weight: bold;
+      font-size: 10pt;
+      text-align: left;
+      background-color: #FFFFBA;
+  }
+
+
+  .gre {
+      background-color: #92FF9A;
+  }
+
+
+  .collExt {
+      color: rgb(0,0,255);
+  }

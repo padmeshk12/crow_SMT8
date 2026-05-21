@@ -1,0 +1,21 @@
+
+xARPS1020A5_tf_REV02/src/mainSpecs/ARPS1020A5_tf_REV02/Spc_Lev_eqn3_spec1_set1_Tim_scan_merge_spec_set1_set1.spec#//@specê
+FAULTB_PS1600
+
+EN0_PS1600
+
+OFF_PS1600
+
+FCB_PS1600£ARPS1020A5_tf_REV02/src/mainSpecs/ARPS1020A5_tf_REV02/Spc_Lev_eqn3_spec1_set1_Tim_scan_merge_spec_set1_set1.spec#//@spec/@variableAssignmentsAndSetups.0/@instSetup¥
+settings—ARPS1020A5_tf_REV02/src/mainSpecs/ARPS1020A5_tf_REV02/Spc_Lev_eqn3_spec1_set1_Tim_scan_merge_spec_set1_set1.spec#//@spec/@variableAssignmentsAndSetups.0/@instSetup/@properties.0/@assignment/@reference/@element"”
+timing»ARPS1020A5_tf_REV02/src/mainSpecs/ARPS1020A5_tf_REV02/Spc_Lev_eqn3_spec1_set1_Tim_scan_merge_spec_set1_set1.spec#//@spec/@variableAssignmentsAndSetups.0/@instSetup/@properties.0/@assignment/@rhs/@expr±
+	SS_PS1600
+
+GND_PS1600
+VBIAS_PS1600
+ITRIP_PS1600
+ISEN_PS1600
+U5_IC_IN
+U5_IC_EN£ARPS1020A5_tf_REV02/src/mainSpecs/ARPS1020A5_tf_REV02/Spc_Lev_eqn3_spec1_set1_Tim_scan_merge_spec_set1_set1.spec#//@spec/@variableAssignmentsAndSetups.1/@instSetup¥
+settings—ARPS1020A5_tf_REV02/src/mainSpecs/ARPS1020A5_tf_REV02/Spc_Lev_eqn3_spec1_set1_Tim_scan_merge_spec_set1_set1.spec#//@spec/@variableAssignmentsAndSetups.1/@instSetup/@properties.0/@assignment/@reference/@element"”
+timing»ARPS1020A5_tf_REV02/src/mainSpecs/ARPS1020A5_tf_REV02/Spc_Lev_eqn3_spec1_set1_Tim_scan_merge_spec_set1_set1.spec#//@spec/@variableAssignmentsAndSetups.1/@instSetup/@properties.0/@assignment/@rhs/@expr*/configuration.ARPS10X0X5__master_cfg_mfh.Groups*0levels.ARPS10X0X5__master_lev_mfh.Lev_eqn3_spec1*7levels.ARPS10X0X5__master_lev_mfh.EQNSET3.Lev_eqn3_set1*Ctiming.ARPS10X0X5__master_tim_mfh.Tim_multiportspec_scan_merge_spec*Htiming.ARPS10X0X5__master_tim_mfh.EQNSET6.Tim_eqn6_set1_using_pALL_PINS_*Ktiming.ARPS10X0X5__master_tim_mfh.EQNSET8.Tim_eqn8_set1_using_P_ALL_EXP_SPI*Cwavetables.ARPS10X0X5__master_tim_mfh.Wvt_Multiport_Scan_merge_spec

@@ -1,0 +1,10 @@
+sequence Scan {
+  parallel Scan {
+    sequential exList1_ppara_STIL {
+      patternCall vectors.STIL_FULLSCAN_crow_atpg_scan_ex1_ts1_para STIL_FULLSCAN_crow_atpg_scan_ex1_ts1_para;
+    }
+    sequential exList2_pscan_STIL {
+      patternCall vectors.STIL_FULLSCAN_crow_atpg_scan_ex1_ts1_scan STIL_FULLSCAN_crow_atpg_scan_ex1_ts1_scan;
+    }
+  }
+}

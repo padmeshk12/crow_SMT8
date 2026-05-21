@@ -1,0 +1,3 @@
+config myConfig {
+    system.setup.operating_sequence.default_execution_mode = "unbursted";
+}

@@ -1,0 +1,30 @@
+flow Scan {
+  setup {
+    suite Disconnect_ALL_3_1 calls empty.EMPTY { }
+    suite SCAN calls CROW_ARPS10X0X5_TM.Crow_tml.Scan_Test {
+      measurement.operatingSequence = setupRef(vectors.Scan);
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_scan_merge_spec_set1_set1);
+    }
+    suite Disconnect_ALL_3_1_2 calls empty.EMPTY { }
+    suite Logic calls CROW_ARPS10X0X5_TM.Crow_tml.Logic {
+      measurement.operatingSequence = setupRef(vectors.logic);
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_logic_spec_set1_set1);
+    }
+    suite Disconnect_ALL_3_1_1 calls empty.EMPTY { }
+  }
+  execute {
+    Disconnect_ALL_3_1.execute();
+    SCAN.execute();
+    if(SCAN.pass) { }
+    else {
+      // multi_bin;
+    }
+    Disconnect_ALL_3_1_2.execute();
+    Logic.execute();
+    if(Logic.pass) { }
+    else {
+      // multi_bin;
+    }
+    Disconnect_ALL_3_1_1.execute();
+  }
+}

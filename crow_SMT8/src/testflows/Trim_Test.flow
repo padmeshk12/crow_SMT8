@@ -1,0 +1,164 @@
+flow Trim_Test {
+  setup {
+    suite Vreftrim calls CROW_ARPS10X0X5_TM.Crow_tml.Vreftrim {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite Disconnect_ALL_4_2 calls empty.EMPTY { }
+    suite SS_Current_Trim calls CROW_ARPS10X0X5_TM.Crow_tml.SS_Current_Trim {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite SS_Gain calls CROW_ARPS10X0X5_TM.Crow_tml.SS_Gain {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite SSoffset_Trim calls CROW_ARPS10X0X5_TM.Crow_tml.SSoffset_Trim {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite VDD_UVLO_OTS_POR calls CROW_ARPS10X0X5_TM.Crow_tml.UVLO_OTS_POR_PORsu_TMode {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite Disconnect_ALL_4_1_1 calls empty.EMPTY { }
+    suite UVLO_POR_redundancy_AWG calls CROW_ARPS10X0X5_TM.Crow_tml.UVLO_AWGMethod {
+      // missing Level setup in specification;
+      // measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Tim_eqn5_spec1_set1);
+      bypass = true;
+    }
+    suite UVLO_POR_redundancy calls empty.EMPTY { }
+    suite Disconnect_ALL_4_2_1 calls empty.EMPTY { }
+    suite ILIM_block_offset_Trim_hcu calls CROW_ARPS10X0X5_TM.ILIM_block_offset_Trim {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+      bypass = true;
+    }
+    suite ILIM_block_offset_Trim_ppmu calls CROW_ARPS10X0X5_TM.Crow_tml.ILIM_block_offset_Trim_ppmu {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+      bypass = true;
+    }
+    suite ILIM_gain_Trim calls CROW_ARPS10X0X5_TM.Crow_tml.ILIM_gain_Trim {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+      bypass = true;
+    }
+    suite ILIMI_GAIN_TRIM_25PIMAX calls CROW_ARPS10X0X5_TM.Crow_tml.ILIM_gain_TRIM_25PIMAX {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite Disconnect_ALL_4_2_1_2 calls empty.EMPTY { }
+    suite ISENSE_BlockOffset_Trim_New calls CROW_ARPS10X0X5_TM.Crow_tml.ISENSE_blockOffset_trim_New {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite SNS_gain_Trim calls CROW_ARPS10X0X5_TM.Crow_tml.SNS_gain_Trim {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+      bypass = true;
+    }
+    suite Disconnect_ALL_4_2_1_1 calls empty.EMPTY { }
+    suite SNS_gain_Trim_25PIMAX calls CROW_ARPS10X0X5_TM.Crow_tml.SNS_gain_Trim_25PIMAX {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite OC_Delay_Trim calls CROW_ARPS10X0X5_TM.Crow_tml.OC_Delay_Trim {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite PostVref_Iref_ib1u calls CROW_ARPS10X0X5_TM.Crow_tml.Post_Vreftrim_Ireftrim {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite SS_Done_level calls CROW_ARPS10X0X5_TM.Crow_tml.SS_doneLevel {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite Device_varient_Read calls CROW_ARPS10X0X5_TM.Crow_tml.Device_Varient {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+      bypass = true;
+    }
+  }
+  execute {
+    if(testProgramVariables.getDouble("BLOWN_RETEST") != 0.0) { }
+    else {
+      Vreftrim.execute();
+      if(Vreftrim.pass) { }
+      else {
+        // multi_bin;
+      }
+      Disconnect_ALL_4_2.execute();
+      SS_Current_Trim.execute();
+      if(SS_Current_Trim.pass) { }
+      else {
+        // multi_bin;
+      }
+      SS_Gain.execute();
+      if(SS_Gain.pass) { }
+      else {
+        // multi_bin;
+      }
+      SSoffset_Trim.execute();
+      if(SSoffset_Trim.pass) { }
+      else {
+        // multi_bin;
+      }
+      VDD_UVLO_OTS_POR.execute();
+      if(VDD_UVLO_OTS_POR.pass) { }
+      else {
+        // multi_bin;
+      }
+      Disconnect_ALL_4_1_1.execute();
+      UVLO_POR_redundancy_AWG.execute();
+      if(UVLO_POR_redundancy_AWG.pass) { }
+      else {
+        // multi_bin;
+      }
+      UVLO_POR_redundancy.execute();
+      if(UVLO_POR_redundancy.pass) { }
+      else {
+        // multi_bin;
+      }
+      Disconnect_ALL_4_2_1.execute();
+      ILIM_block_offset_Trim_hcu.execute();
+      if(ILIM_block_offset_Trim_hcu.pass) { }
+      else {
+        // multi_bin;
+      }
+      ILIM_block_offset_Trim_ppmu.execute();
+      if(ILIM_block_offset_Trim_ppmu.pass) { }
+      else {
+        // multi_bin;
+      }
+      ILIM_gain_Trim.execute();
+      if(ILIM_gain_Trim.pass) { }
+      else {
+        // multi_bin;
+      }
+      ILIMI_GAIN_TRIM_25PIMAX.execute();
+      if(ILIMI_GAIN_TRIM_25PIMAX.pass) { }
+      else {
+        // multi_bin;
+      }
+      Disconnect_ALL_4_2_1_2.execute();
+      ISENSE_BlockOffset_Trim_New.execute();
+      if(ISENSE_BlockOffset_Trim_New.pass) { }
+      else {
+        // multi_bin;
+      }
+      SNS_gain_Trim.execute();
+      if(SNS_gain_Trim.pass) { }
+      else {
+        // multi_bin;
+      }
+      Disconnect_ALL_4_2_1_1.execute();
+      SNS_gain_Trim_25PIMAX.execute();
+      if(SNS_gain_Trim_25PIMAX.pass) { }
+      else {
+        // multi_bin;
+      }
+      OC_Delay_Trim.execute();
+      if(OC_Delay_Trim.pass) { }
+      else {
+        // multi_bin;
+      }
+      PostVref_Iref_ib1u.execute();
+      if(PostVref_Iref_ib1u.pass) { }
+      else {
+        // multi_bin;
+      }
+      SS_Done_level.execute();
+      if(SS_Done_level.pass) { }
+      else {
+        // multi_bin;
+      }
+    }
+    Device_varient_Read.execute();
+  }
+}

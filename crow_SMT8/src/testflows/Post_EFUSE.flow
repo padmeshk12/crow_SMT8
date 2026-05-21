@@ -1,0 +1,96 @@
+flow Post_EFUSE {
+  setup {
+    flow Parity_Check calls testflows.Parity_Check { }
+    suite Post_Vbias_Test calls CROW_ARPS10X0X5_TM.Crow_tml.Post_Vbias_Vtg_Test {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite Disconnect_ALL_1_2_1_2 calls empty.EMPTY { }
+    suite Post_SS_Test calls CROW_ARPS10X0X5_TM.Crow_tml.Post_SSCurrent_Test {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite Disconnect_ALL_1_2_1 calls empty.EMPTY { }
+    suite Post_SS_Gain_Test calls CROW_ARPS10X0X5_TM.Crow_tml.Post_SS_Gain_Test {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite Post_ILIM_Test calls CROW_ARPS10X0X5_TM.Crow_tml.Post_Itrip_Test {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+      bypass = true;
+    }
+    suite POST_ILIM_25IMAX_TEST calls CROW_ARPS10X0X5_TM.Crow_tml.Post_Itrip_Test_HCU {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set3);
+    }
+    suite SlowTrip calls CROW_ARPS10X0X5_TM.Crow_tml.Slow_trip_without_testmode {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite Post_ISENSE_Gain calls CROW_ARPS10X0X5_TM.Crow_tml.Post_ISENSE_Gain {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+      bypass = true;
+    }
+    suite Post_ISENSE_Gain_HCU calls CROW_ARPS10X0X5_TM.Crow_tml.POST_ISNS_HCU {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite ILIM_Slowtrip calls CROW_ARPS10X0X5_TM.Crow_tml.ILIM_Slowtrip {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite TISLOW calls CROW_ARPS10X0X5_TM.Crow_tml.TISLOW {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+  }
+  execute {
+    if(testProgramVariables.getDouble("BLOWN_RETEST") != 0.0) {
+      Parity_Check.execute();
+      Post_Vbias_Test.execute();
+      if(Post_Vbias_Test.pass) { }
+      else {
+        // multi_bin;
+      }
+      Disconnect_ALL_1_2_1_2.execute();
+      Post_SS_Test.execute();
+      if(Post_SS_Test.pass) { }
+      else {
+        // multi_bin;
+      }
+      Disconnect_ALL_1_2_1.execute();
+      Post_SS_Gain_Test.execute();
+      if(Post_SS_Gain_Test.pass) { }
+      else {
+        // multi_bin;
+      }
+      Post_ILIM_Test.execute();
+      if(Post_ILIM_Test.pass) { }
+      else {
+        // multi_bin;
+      }
+      POST_ILIM_25IMAX_TEST.execute();
+      if(POST_ILIM_25IMAX_TEST.pass) { }
+      else {
+        // multi_bin;
+      }
+      SlowTrip.execute();
+      if(SlowTrip.pass) { }
+      else {
+        // multi_bin;
+      }
+      Post_ISENSE_Gain.execute();
+      if(Post_ISENSE_Gain.pass) { }
+      else {
+        // multi_bin;
+      }
+      Post_ISENSE_Gain_HCU.execute();
+      if(Post_ISENSE_Gain_HCU.pass) { }
+      else {
+        // multi_bin;
+      }
+      ILIM_Slowtrip.execute();
+      if(ILIM_Slowtrip.pass) { }
+      else {
+        // multi_bin;
+      }
+      TISLOW.execute();
+      if(TISLOW.pass) { }
+      else {
+        // multi_bin;
+      }
+    }
+  }
+}

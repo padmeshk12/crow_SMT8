@@ -1,0 +1,42 @@
+flow PRE_LEAKAGE {
+  setup {
+    suite Disconnect_ALL_1_4 calls CROW_ARPS10X0X5_TM.Crow_tml.Disconnect_ALL {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn1_spec1_set1_Tim_timing_spec_set1);
+    }
+    suite Output_disabled_leakage calls CROW_ARPS10X0X5_TM.Crow_tml.Output_disabled_VDD_VIN_ptd_IOFFVDD0_VIN_50 {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite Leakage_Test calls CROW_ARPS10X0X5_TM.Leakage_Test_ptd_IOFF_REVERSE_VOUT_VIN_LEAKAGE_100uA {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite Nominal_Input_pin_Leakages calls CROW_ARPS10X0X5_TM.Nominal_Input_leakage_ptd_OFF_PS1600_LEAKAGE_2V {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite Output_enabled_leakage calls CROW_ARPS10X0X5_TM.Crow_tml.Output_enabled_Leakage_initial_debug_ptd_IVIN_VDD_50_Vin_50 {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+  }
+  execute {
+    Disconnect_ALL_1_4.execute();
+    Output_disabled_leakage.execute();
+    if(Output_disabled_leakage.pass) { }
+    else {
+      // multi_bin;
+    }
+    Leakage_Test.execute();
+    if(Leakage_Test.pass) { }
+    else {
+      // multi_bin;
+    }
+    Nominal_Input_pin_Leakages.execute();
+    if(Nominal_Input_pin_Leakages.pass) { }
+    else {
+      // multi_bin;
+    }
+    Output_enabled_leakage.execute();
+    if(Output_enabled_leakage.pass) { }
+    else {
+      // multi_bin;
+    }
+  }
+}

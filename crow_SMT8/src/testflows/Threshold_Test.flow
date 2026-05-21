@@ -1,0 +1,110 @@
+flow Threshold_Test {
+  setup {
+    suite Disconnect_ALL_1_3_1 calls empty.EMPTY { }
+    suite IO_TEST calls CROW_ARPS10X0X5_TM.Crow_tml.IO_TEST {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite Disconnect_ALL_1_3 calls empty.EMPTY { }
+    suite SS_Threshold_Test_AWG_method calls empty.EMPTY { }
+    suite SS_Threshold_Test calls CROW_ARPS10X0X5_TM.Crow_tml.SS_threshold_test {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn1_spec1_set1_Tim_timing_spec_set1);
+      bypass = true;
+    }
+    suite Disconnect_ALL_3_1_1_1 calls empty.EMPTY { }
+    suite UVLO_Threshold calls CROW_ARPS10X0X5_TM.Crow_tml.UVLO_Threshold {
+      // missing Level setup in specification;
+      // measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Tim_eqn5_spec1_set1);
+    }
+    suite EN_Rise_Fall_Hysteresis calls empty.EMPTY { }
+    suite FCB_Rise_Fall_Hysteresis calls CROW_ARPS10X0X5_TM.FCB_threshold_Test {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set3);
+    }
+    suite Disconnect_ALL_1_1 calls empty.EMPTY { }
+    suite Output_characteristics_functional calls CROW_ARPS10X0X5_TM.FAULTB_VOL_VOH {
+      // missing Level setup in specification;
+      // measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Tim_timing_spec_set1);
+    }
+    suite Disconnect_ALL_4 calls empty.EMPTY { }
+    suite Fast_Trip_Redudancy calls CROW_ARPS10X0X5_TM.Crow_tml.ILIM_Fast_Curr {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite Fast_Trip_Current calls CROW_ARPS10X0X5_TM.Crow_tml.Fast_Trip_2IMAX {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+      bypass = true;
+    }
+    suite Disconnect_ALL_4_1 calls empty.EMPTY { }
+    suite Fast_Trip_10A_5A_Check calls CROW_ARPS10X0X5_TM.Crow_tml.FAST_TRIP_5A_10A_Check_Test {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite Disconnect_ALL_4_1_4 calls empty.EMPTY { }
+    suite SS_Delay_Test calls CROW_ARPS10X0X5_TM.Crow_tml.SS_Delay_Test {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn10_spec1_set1);
+    }
+    suite Disconnect_ALL_4_1_3 calls empty.EMPTY { }
+  }
+  execute {
+    Disconnect_ALL_1_3_1.execute();
+    IO_TEST.execute();
+    if(IO_TEST.pass) { }
+    else {
+      // multi_bin;
+    }
+    Disconnect_ALL_1_3.execute();
+    SS_Threshold_Test_AWG_method.execute();
+    if(SS_Threshold_Test_AWG_method.pass) { }
+    else {
+      // multi_bin;
+    }
+    SS_Threshold_Test.execute();
+    if(SS_Threshold_Test.pass) { }
+    else {
+      // multi_bin;
+    }
+    Disconnect_ALL_3_1_1_1.execute();
+    UVLO_Threshold.execute();
+    if(UVLO_Threshold.pass) { }
+    else {
+      // multi_bin;
+    }
+    EN_Rise_Fall_Hysteresis.execute();
+    if(EN_Rise_Fall_Hysteresis.pass) { }
+    else {
+      // multi_bin;
+    }
+    FCB_Rise_Fall_Hysteresis.execute();
+    if(FCB_Rise_Fall_Hysteresis.pass) { }
+    else {
+      // multi_bin;
+    }
+    Disconnect_ALL_1_1.execute();
+    Output_characteristics_functional.execute();
+    if(Output_characteristics_functional.pass) { }
+    else {
+      // multi_bin;
+    }
+    Disconnect_ALL_4.execute();
+    Fast_Trip_Redudancy.execute();
+    if(Fast_Trip_Redudancy.pass) { }
+    else {
+      // multi_bin;
+    }
+    Fast_Trip_Current.execute();
+    if(Fast_Trip_Current.pass) { }
+    else {
+      // multi_bin;
+    }
+    Disconnect_ALL_4_1.execute();
+    Fast_Trip_10A_5A_Check.execute();
+    if(Fast_Trip_10A_5A_Check.pass) { }
+    else {
+      // multi_bin;
+    }
+    Disconnect_ALL_4_1_4.execute();
+    SS_Delay_Test.execute();
+    if(SS_Delay_Test.pass) { }
+    else {
+      // multi_bin;
+    }
+    Disconnect_ALL_4_1_3.execute();
+  }
+}

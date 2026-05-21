@@ -1,0 +1,79 @@
+flow EFUSE {
+  setup {
+    suite Disconnect_ALL_1_2 calls empty.EMPTY {
+      bypass = true;
+    }
+    suite EFUSE_REFERENCE_CURRENT_VOLTAGE calls CROW_ARPS10X0X5_TM.Crow_tml.E_FUSE_Reference_Current_Voltage {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite EFUSE_RESISTANCE_MEASUREMENT calls CROW_ARPS10X0X5_TM.Crow_tml.E_fuse_res_debug {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite PRE_BURN_PASS_FET_LEAKAGE calls CROW_ARPS10X0X5_TM.Crow_tml.BURN_PASS_FET_LEAKAGE_ptd_PRE_Reverse_Leakage_FET {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite EFUSE_BURN calls CROW_ARPS10X0X5_TM.Crow_tml.EFUSE_BURN {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn7_spec1_set1);
+    }
+    suite eFUSE_burn_readmargin calls CROW_ARPS10X0X5_TM.Crow_tml.E_Fuse_Read_margin_Test {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite Disconnect_ALL_1_2_1_1_1 calls empty.EMPTY { }
+    suite EFUSE_ERROR_LOGIC calls CROW_ARPS10X0X5_TM.Crow_tml.E_FUSE_ERROR_LOGIC {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite POST_BURN_PASS_FET_LEAKAGE calls CROW_ARPS10X0X5_TM.Crow_tml.BURN_PASS_FET_LEAKAGE {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite POST_EFUSE_RESISTANCE calls CROW_ARPS10X0X5_TM.Crow_tml.Post_Efuse_Measurment {
+      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+  }
+  execute {
+    if(testProgramVariables.getDouble("BLOWN_RETEST") != 0.0) { }
+    else {
+      Disconnect_ALL_1_2.execute();
+      EFUSE_REFERENCE_CURRENT_VOLTAGE.execute();
+      if(EFUSE_REFERENCE_CURRENT_VOLTAGE.pass) { }
+      else {
+        // multi_bin;
+      }
+      EFUSE_RESISTANCE_MEASUREMENT.execute();
+      if(EFUSE_RESISTANCE_MEASUREMENT.pass) { }
+      else {
+        // multi_bin;
+      }
+      PRE_BURN_PASS_FET_LEAKAGE.execute();
+      if(PRE_BURN_PASS_FET_LEAKAGE.pass) { }
+      else {
+        // multi_bin;
+      }
+      EFUSE_BURN.execute();
+      if(EFUSE_BURN.pass) { }
+      else {
+        // multi_bin;
+      }
+      eFUSE_burn_readmargin.execute();
+      if(eFUSE_burn_readmargin.pass) { }
+      else {
+        // multi_bin;
+      }
+      Disconnect_ALL_1_2_1_1_1.execute();
+      EFUSE_ERROR_LOGIC.execute();
+      if(EFUSE_ERROR_LOGIC.pass) { }
+      else {
+        // multi_bin;
+      }
+      POST_BURN_PASS_FET_LEAKAGE.execute();
+      if(POST_BURN_PASS_FET_LEAKAGE.pass) { }
+      else {
+        // multi_bin;
+      }
+    }
+    POST_EFUSE_RESISTANCE.execute();
+    if(POST_EFUSE_RESISTANCE.pass) { }
+    else {
+      // multi_bin;
+    }
+  }
+}

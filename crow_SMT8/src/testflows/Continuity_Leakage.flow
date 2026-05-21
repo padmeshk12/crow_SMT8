@@ -1,0 +1,124 @@
+flow Continuity_Leakage {
+  setup {
+//    suite Disconnect_ALL calls CROW_ARPS10X0X5_TM.Crow_tml.Disconnect_ALL {
+//      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn1_spec1_set1_Tim_timing_spec_set1);
+//    }
+    suite CONTINUITY calls SPI.conti {
+//      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn1_spec1_set1_Tim_timing_spec_set1);
+    }
+  //  suite Pin_to_Pin_Leakage calls empty.EMPTY { }
+    suite IVDDFL_IVINFL_RONFL calls CROW_ARPS10X0X5_TM.Crow_tml.RON_200mA {
+   //   measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+//    suite Disconnect_ALL_3 calls CROW_ARPS10X0X5_TM.Crow_tml.Disconnect_ALL {
+//      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn1_spec1_set1_Tim_timing_spec_set1);
+//    }
+//    suite RON_DIFF_LOAD_CURRENT calls empty.EMPTY { }
+    suite Fuse_Burn_Check calls CROW_ARPS10X0X5_TM.Crow_tml.Fuse_Burn_Check {
+ //     measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+ //   suite Disconnect_ALL_1 calls CROW_ARPS10X0X5_TM.Crow_tml.Fuse_Burn_Check {
+//      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn1_spec1_set1_Tim_timing_spec_set1);
+//    }
+    suite Gross_Functional_EN_FCB_FAULTB_OFF calls SPI.dcVI_two_step_measure  {
+        measurement.specification =  setupRef(mainSpecs.ARPS1020A5_tf_REV02.sample_to_be_deleted);
+//      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+
+      suite dcVI_two_step_measure calls SPI.dcVI_two_step_measure_1  {
+
+//      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+    }
+    suite UVLO calls SPI.UVLO  {}
+
+
+          suite AWG calls SPI.awg  {}
+//          suite PS1600_AWG calls SPI.PS1600_static_awg  {
+//               measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+//               measurement.operatingSequence = setupRef(SPI.SPEC.awg);
+//          }
+   //       suite DGT calls SPI.dgt  {}
+
+//    suite EN_pullup_resistor calls CROW_ARPS10X0X5_TM.Crow_tml.EN_Pullup_Resistor {
+//      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+//    }
+//    suite Output_enabled_Leakage_IVDDFL_IVINFL calls CROW_ARPS10X0X5_TM.Crow_tml.Output_Enabled_Leakage_2nd {
+//      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+//    }
+//    flow PRE_LEAKAGE calls testflows.PRE_LEAKAGE { }
+//    suite ABS_MAX calls empty.EMPTY { }
+//    suite OVST calls CROW_ARPS10X0X5_TM.Crow_tml.OVST {
+//      measurement.specification = setupRef(mainSpecs.ARPS1020A5_tf_REV02.Spc_Lev_eqn3_spec1_set1_Tim_eqn5_spec1_set1);
+//    }
+//    flow Post_Leakage calls testflows.Post_Leakage { }
+  }
+  execute {
+//    Disconnect_ALL.execute();
+    CONTINUITY.execute();
+//    if(CONTINUITY.pass) { }
+//    else {
+      // multi_bin;
+  //  }
+//    Pin_to_Pin_Leakage.execute();
+//    if(Pin_to_Pin_Leakage.pass) { }
+//    else {
+//      // multi_bin;
+//    }
+    IVDDFL_IVINFL_RONFL.execute();
+//    if(IVDDFL_IVINFL_RONFL.pass) { }
+//    else {
+//      // multi_bin;
+//    }
+//    Disconnect_ALL_3.execute();
+//    RON_DIFF_LOAD_CURRENT.execute();
+//    if(RON_DIFF_LOAD_CURRENT.pass) { }
+//    else {
+//      // multi_bin;
+//    }
+    Fuse_Burn_Check.execute();
+//    if(Fuse_Burn_Check.pass) { }
+//    else {
+//      // multi_bin;
+//    }
+//    Disconnect_ALL_1.execute();
+    Gross_Functional_EN_FCB_FAULTB_OFF.execute();
+
+     dcVI_two_step_measure.execute();
+     UVLO.execute();
+     AWG.execute();
+//     PS1600_AWG.execute();
+  //   DGT.execute();
+
+//    if(Gross_Functional_EN_FCB_FAULTB_OFF.pass) { }
+//    else {
+//      // multi_bin;
+//    }
+//    EN_pullup_resistor.execute();
+//    if(EN_pullup_resistor.pass) { }
+//    else {
+//      // multi_bin;
+//    }
+//    Output_enabled_Leakage_IVDDFL_IVINFL.execute();
+//    if(Output_enabled_Leakage_IVDDFL_IVINFL.pass) { }
+//    else {
+//      // multi_bin;
+//    }
+//    PRE_LEAKAGE.execute();
+//    if(testProgramVariables.getDouble("BLOWN_RETEST") != 0.0) { }
+//    else {
+//      if(testProgramVariables.getDouble("TEMP") == 25) {
+//        ABS_MAX.execute();
+//        if(ABS_MAX.pass) { }
+//        else {
+//          // multi_bin;
+//        }
+//        OVST.execute();
+//        if(OVST.pass) { }
+//        else {
+//          // multi_bin;
+//        }
+//      }
+//    }
+//    Post_Leakage.execute();
+  }
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>
+      TaCoST8 Conversion Summary Report
+    </title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    </link>
+    <script src="style.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <ul class="menuDiv">
+      <li>
+        <a href="../summary_report.htm">
+          Home
+        </a>
+        &gt;
+      </li>
+      <li>
+        Pattern Summary
+      </li>
+    </ul>
+    <br/>
+    <br/>
+    <hr/>
+    <div id="vec">
+      <table class="tab">
+        <tr>
+          <td class="tTitle" colspan="5">
+            Patterns 
+          </td>
+        </tr>
+        <tr>
+          <td width="30%">
+            Source
+          </td>
+          <td colspan="4">
+            /projects/apogeesemi/padmesh/crow-b921639/CROW_ARPS10X0X5_REV02/CROW_ARPS10X0X5_TP/vectors/ARPS10X0X5.pat.mfh
+          </td>
+        </tr>
+        <tr>
+          <td width="30%">
+            Target
+          </td>
+          <td colspan="4">
+            /projects/apogeesemi/padmesh/crow_SMT8/src
+          </td>
+        </tr>
+        <tr>
+          <td width="30%">
+            Conversion time
+          </td>
+          <td colspan="4">
+            2.02 s
+          </td>
+        </tr>
+        <tr>
+          <td width="30%">
+            Pattern status
+            <td onclick="showRow(&apos;all&apos;,&apos;Labels&apos;,&apos;scld&apos;)" width="10%" style="cursor:pointer" bgcolor="#33ccff">
+              All: 4
+            </td>
+            <td onclick="showRow(&apos;pass&apos;,&apos;Labels&apos;,&apos;scld&apos;)" width="10%" style="cursor:pointer" class="gre">
+              Converted without issues: 4
+            </td>
+            <td onclick="showRow(&apos;warn&apos;,&apos;Labels&apos;,&apos;scld&apos;)" width="10%" style="cursor:pointer" class="warn">
+              Converted with warnings: 0
+            </td>
+            <td onclick="showRow(&apos;err&apos;,&apos;Labels&apos;,&apos;scld&apos;)" width="10%" style="cursor:pointer" class="err">
+              Converted with errors: 0
+            </td>
+          </td>
+        </tr>
+        <tr>
+          <td width="30%">
+            Burst status
+            <td onclick="showRow(&apos;all&apos;,&apos;Bursts&apos;,&apos;scbd&apos;)" width="10%" style="cursor:pointer" bgcolor="#33ccff">
+              All: 0
+            </td>
+            <td onclick="showRow(&apos;pass&apos;,&apos;Bursts&apos;,&apos;scbd&apos;)" width="10%" style="cursor:pointer" class="gre">
+              Converted without issues: 0
+            </td>
+            <td onclick="showRow(&apos;warn&apos;,&apos;Bursts&apos;,&apos;scbd&apos;)" width="10%" style="cursor:pointer" class="warn">
+              Converted with warnings: 0
+            </td>
+            <td onclick="showRow(&apos;err&apos;,&apos;Bursts&apos;,&apos;scbd&apos;)" width="10%" style="cursor:pointer" class="err">
+              Converted with errors: 0
+            </td>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <table id="sect" style="display: none">
+      <tr>
+        <td align="left">
+          <input type="text" id="searchstr" class="textbox" size="10"/>
+          <input type="button" value="Search" onclick="findIt(&apos;searchstr&apos;)"/>
+        </td>
+      </tr>
+    </table>
+    <div id="scld" style="display: none">
+      <table class="tab" id="Labels">
+        <tr>
+          <td class="tTitle" colspan="5">
+            Label Status Details 
+          </td>
+        </tr>
+        <tr>
+          <td width="35%" colspan="2">
+            Label name in SmarTest 7
+          </td>
+          <td width="35%">
+            Mapping in SmarTest 8
+          </td>
+          <td width="30%">
+            Not converted instructions
+          </td>
+        </tr>
+        <tr state="empty" style="display: none">
+          <td colspan="2">
+            n/a
+          </td>
+          <td>
+            n/a
+          </td>
+          <td>
+            n/a
+          </td>
+        </tr>
+        <tr state="pass">
+          <td width="2%" id="STIL_FULLSCAN_crow_atpg_logic_ex1_ts2_para" onclick="showDetail(event,&apos;STIL_FULLSCAN_crow_atpg_logic_ex1_ts2_para&apos;,&apos;Labels&apos;)" style="" class="gre">
+            +
+          </td>
+          <td width="35%" onclick="showDetail(event,&apos;STIL_FULLSCAN_crow_atpg_logic_ex1_ts2_para&apos;,&apos;Labels&apos;)" style="" class="gre">
+            STIL_FULLSCAN_crow_atpg_logic_ex1_ts2_para
+          </td>
+          <td width="35%" class="gre">
+            vectors/STIL_FULLSCAN_crow_atpg_logic_ex1_ts2_para.pat
+          </td>
+          <td class="gre">
+            n/a
+          </td>
+        </tr>
+        <tr state="pass">
+          <td width="2%" id="STIL_FULLSCAN_crow_atpg_logic_ex1_ts2_scan_para" onclick="showDetail(event,&apos;STIL_FULLSCAN_crow_atpg_logic_ex1_ts2_scan_para&apos;,&apos;Labels&apos;)" style="" class="gre">
+            +
+          </td>
+          <td width="35%" onclick="showDetail(event,&apos;STIL_FULLSCAN_crow_atpg_logic_ex1_ts2_scan_para&apos;,&apos;Labels&apos;)" style="" class="gre">
+            STIL_FULLSCAN_crow_atpg_logic_ex1_ts2_scan_para
+          </td>
+          <td width="35%" class="gre">
+            vectors/STIL_FULLSCAN_crow_atpg_logic_ex1_ts2_scan_para.pat
+          </td>
+          <td class="gre">
+            n/a
+          </td>
+        </tr>
+        <tr state="pass">
+          <td width="2%" id="STIL_FULLSCAN_crow_atpg_scan_ex1_ts1_para" onclick="showDetail(event,&apos;STIL_FULLSCAN_crow_atpg_scan_ex1_ts1_para&apos;,&apos;Labels&apos;)" style="" class="gre">
+            +
+          </td>
+          <td width="35%" onclick="showDetail(event,&apos;STIL_FULLSCAN_crow_atpg_scan_ex1_ts1_para&apos;,&apos;Labels&apos;)" style="" class="gre">
+            STIL_FULLSCAN_crow_atpg_scan_ex1_ts1_para
+          </td>
+          <td width="35%" class="gre">
+            vectors/STIL_FULLSCAN_crow_atpg_scan_ex1_ts1_para.pat
+          </td>
+          <td class="gre">
+            n/a
+          </td>
+        </tr>
+        <tr state="pass">
+          <td width="2%" id="STIL_FULLSCAN_crow_atpg_scan_ex1_ts1_scan" onclick="showDetail(event,&apos;STIL_FULLSCAN_crow_atpg_scan_ex1_ts1_scan&apos;,&apos;Labels&apos;)" style="" class="gre">
+            +
+          </td>
+          <td width="35%" onclick="showDetail(event,&apos;STIL_FULLSCAN_crow_atpg_scan_ex1_ts1_scan&apos;,&apos;Labels&apos;)" style="" class="gre">
+            STIL_FULLSCAN_crow_atpg_scan_ex1_ts1_scan
+          </td>
+          <td width="35%" class="gre">
+            vectors/STIL_FULLSCAN_crow_atpg_scan_ex1_ts1_scan.pat
+          </td>
+          <td class="gre">
+            n/a
+          </td>
+        </tr>
+      </table>
+    </div>
+    <p/>
+    <div id="scbd" style="display: none">
+      <table class="tab" id="Bursts">
+        <tr>
+          <td class="tTitle" colspan="5">
+            Burst Status Details 
+          </td>
+        </tr>
+        <tr>
+          <td width="35%" colspan="2">
+            Burst name in SmarTest 7
+          </td>
+          <td width="35%">
+            Mapping in SmarTest 8
+          </td>
+          <td width="30%">
+            Not converted instructions
+          </td>
+        </tr>
+        <tr state="empty" style="display: none">
+          <td colspan="2">
+            n/a
+          </td>
+          <td>
+            n/a
+          </td>
+          <td>
+            n/a
+          </td>
+        </tr>
+      </table>
+    </div>
+    <p/>
+    <p/>
+    <div id="divMsg" style="font-size:20px;text-align:center;display:none;position:absolute;top:10px;left:200px;width:800px;height:30px;background-color:#d0d0d0">
+      Loading data ...
+    </div>
+    <br/>
+    <br/>
+    <hr/>
+    <div id="footer">
+      Copyright © 2026 ADVANTEST CORPORATION. All rights reserved.
+    </div>
+  </body>
+</html>

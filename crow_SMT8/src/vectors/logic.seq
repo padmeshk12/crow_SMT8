@@ -1,0 +1,10 @@
+sequence logic {
+  parallel logic {
+    sequential exList1_ppara_STIL {
+      patternCall vectors.STIL_FULLSCAN_crow_atpg_logic_ex1_ts2_para STIL_FULLSCAN_crow_atpg_logic_ex1_ts2_para;
+    }
+    sequential exList2_pscan_STIL {
+      patternCall vectors.STIL_FULLSCAN_crow_atpg_logic_ex1_ts2_scan_para STIL_FULLSCAN_crow_atpg_logic_ex1_ts2_scan_para;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+flow preBind {
+    setup {
+        suite import_limit_table calls
+        com.advantest.itee.testtable.testmethod.TestTableReader {
+            testTablePath = "testtable/ARPS10X0X5_20V.ods";
+             limitCategory = "FT_125C";
+          logLevelCategory = "FT_125C";
+             errorLogPath = "/tmp";
+             forceImport = true;
+
+        }
+    }
+
+    execute {
+        import_limit_table.execute();
+
+    }
+}

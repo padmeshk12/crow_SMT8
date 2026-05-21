@@ -1,0 +1,369 @@
+dutboard Pogo_ARPS10X0X5__master_cfg_mfh {
+  sites = 1;
+  signal SS_PS1600 {
+    // pinNo = 1
+    site 1 {
+      pogo = 10102;
+    }
+  }
+  signal FAULTB_PS1600 {
+    // pinNo = 9
+    site 1 {
+      pogo = 10112;
+    }
+  }
+  signal EN0_PS1600 {
+    // pinNo = 10
+    site 1 {
+      pogo = 10201;
+    }
+  }
+  signal OFF_PS1600 {
+    // pinNo = 11
+    site 1 {
+      pogo = 10114;
+    }
+  }
+  signal FCB_PS1600 {
+    // pinNo = 12
+    site 1 {
+      pogo = 10111;
+    }
+  }
+  signal GND_PS1600 {
+    // pinNo = 21
+    site 1 {
+      pogo = 10107;
+    }
+  }
+  signal VBIAS_PS1600 {
+    // pinNo = 22
+    site 1 {
+      pogo = 10105;
+    }
+  }
+  signal ITRIP_PS1600 {
+    // pinNo = 23
+    site 1 {
+      pogo = 10109;
+    }
+  }
+  signal ISEN_PS1600 {
+    // pinNo = 24
+    site 1 {
+      pogo = 10104;
+    }
+  }
+  signal U5_IC_IN {
+    site 1 {
+      pogo = 10108;
+    }
+  }
+  signal U5_IC_EN {
+    site 1 {
+      pogo = 10103;
+    }
+  }
+  signal SS_DPS128 {
+    // pinNo = 1
+    site 1 {
+      pogo = 30307;
+    }
+  }
+  signal FAULT_PU {
+    // pinNo = 9
+    site 1 {
+      pogo = 30301;
+    }
+  }
+  signal EN0_DPS128 {
+    // pinNo = 10
+    site 1 {
+      pogo = 30304;
+    }
+  }
+  signal OFF_DPS128 {
+    // pinNo = 11
+    site 1 {
+      pogo = 30303;
+    }
+  }
+  signal FCB_DPS128 {
+    // pinNo = 12
+    site 1 {
+      pogo = 30302;
+    }
+  }
+  signal VBIAS_DPS128 {
+    // pinNo = 22
+    site 1 {
+      pogo = 30312;
+    }
+  }
+  signal ITRIP_DPS128 {
+    // pinNo = 23
+    site 1 {
+      pogo = 30314;
+    }
+  }
+  signal ISEN_DPS128 {
+    // pinNo = 24
+    site 1 {
+      pogo = 30310;
+    }
+  }
+  signal VOUT1 {
+    // pinNo = 3
+    site 1 {
+      pogo = 32902;
+    }
+  }
+  signal VOUT2_RS1 {
+    // pinNo = 4
+    site 1 {
+      pogo = 32910;
+    }
+  }
+  signal VOUT2_RS2 {
+    // pinNo = 4
+    site 1 {
+      pogo = 33002;
+    }
+  }
+  signal VOUT3_RS1 {
+    // pinNo = 5
+    site 1 {
+      pogo = 33010;
+    }
+  }
+  signal VOUT3_RS2 {
+    // pinNo = 5
+    site 1 {
+      pogo = 33102;
+    }
+  }
+  signal VOUT4 {
+    // pinNo = 6
+    site 1 {
+      pogo = 33110;
+    }
+  }
+  signal VOUT5 {
+    // pinNo = 7
+    site 1 {
+      pogo = 33202;
+    }
+  }
+  signal VOUT6 {
+    // pinNo = 8
+    site 1 {
+      pogo = 33210;
+    }
+  }
+  signal VIN1 {
+    // pinNo = 13
+    site 1 {
+      pogo = 33209;
+    }
+  }
+  signal VIN2 {
+    // pinNo = 14
+    site 1 {
+      pogo = 33201;
+    }
+  }
+  signal VIN3 {
+    // pinNo = 15
+    site 1 {
+      pogo = 33109;
+    }
+  }
+  signal VIN4_RS1 {
+    // pinNo = 16
+    site 1 {
+      pogo = 33101;
+    }
+  }
+  signal VIN4_RS2 {
+    // pinNo = 16
+    site 1 {
+      pogo = 33009;
+    }
+  }
+  signal VIN5_RS1 {
+    // pinNo = 17
+    site 1 {
+      pogo = 33001;
+    }
+  }
+  signal VIN5_RS2 {
+    // pinNo = 17
+    site 1 {
+      pogo = 32909;
+    }
+  }
+  signal VIN6 {
+    // pinNo = 18
+    site 1 {
+      pogo = 32901;
+    }
+  }
+  signal VDD {
+    // pinNo = 20
+    site 1 {
+      pogo = 33107;
+    }
+  }
+  signal U5_VDD {
+    site 1 {
+      pogo = 30305;
+    }
+  }
+  // Utility instrument
+  signal SS_K2_DPS128 {
+    site 1 {
+      settlingTime = 3 ms;
+      pogo = 110;
+    }
+  }
+  // Utility instrument
+  signal SS_K23_CAP {
+    site 1 {
+      settlingTime = 3 ms;
+      pogo = 103;
+    }
+  }
+  // Utility instrument
+  signal FAULTB_K8_DPS128 {
+    site 1 {
+      settlingTime = 3 ms;
+      pogo = 506;
+    }
+  }
+  // Utility instrument
+  signal EN0_K16_DPS128 {
+    site 1 {
+      settlingTime = 3 ms;
+      pogo = 507;
+    }
+  }
+  // Utility instrument
+  signal OFF_K3_DPS128 {
+    site 1 {
+      settlingTime = 3 ms;
+      pogo = 515;
+    }
+  }
+  // Utility instrument
+  signal FCB_K17_DPS128 {
+    site 1 {
+      settlingTime = 3 ms;
+      pogo = 508;
+    }
+  }
+  // Utility instrument
+  signal VIN5_K25_CAP {
+    site 1 {
+      settlingTime = 3 ms;
+      pogo = 104;
+    }
+  }
+  // Utility instrument
+  signal VIN6_K4_VBIAS {
+    site 1 {
+      settlingTime = 3 ms;
+      pogo = 504;
+    }
+  }
+  // Utility instrument
+  signal VIN1_K22_VOUT6 {
+    site 1 {
+      settlingTime = 3 ms;
+      pogo = 101;
+    }
+  }
+  // Utility instrument
+  signal VIN6_K26_CAP {
+    site 1 {
+      settlingTime = 3 ms;
+      pogo = 203;
+    }
+  }
+  // Utility instrument
+  signal VIN6_K28_DIODE_VOUT1 {
+    site 1 {
+      settlingTime = 3 ms;
+      pogo = 201;
+    }
+  }
+  // Utility instrument
+  signal VDD_K24_CAP {
+    site 1 {
+      settlingTime = 3 ms;
+      pogo = 102;
+    }
+  }
+  // Utility instrument
+  signal VDD_K21_VIN6 {
+    site 1 {
+      settlingTime = 3 ms;
+      pogo = 105;
+    }
+  }
+  // Utility instrument
+  signal GND_K9_TGND {
+    site 1 {
+      settlingTime = 3 ms;
+      pogo = 513;
+    }
+  }
+  // Utility instrument
+  signal GND_K10_PS1600 {
+    site 1 {
+      settlingTime = 3 ms;
+      pogo = 514;
+    }
+  }
+  // Utility instrument
+  signal VBIAS_K11_DPS128 {
+    site 1 {
+      settlingTime = 3 ms;
+      pogo = 512;
+    }
+  }
+  // Utility instrument
+  signal ITRIP_K12_TGND {
+    site 1 {
+      settlingTime = 3 ms;
+      pogo = 511;
+    }
+  }
+  // Utility instrument
+  signal ITRIP_K18_DPS128 {
+    site 1 {
+      settlingTime = 3 ms;
+      pogo = 510;
+    }
+  }
+  // Utility instrument
+  signal ISEN_K15_FET {
+    site 1 {
+      settlingTime = 3 ms;
+      pogo = 502;
+    }
+  }
+  // Utility instrument
+  signal ISEN_K30_PS1600_DPS128 {
+    site 1 {
+      settlingTime = 3 ms;
+      pogo = 107;
+    }
+  }
+  // Utility instrument
+  signal ISEN_K14_DPS128 {
+    site 1 {
+      settlingTime = 3 ms;
+      pogo = 509;
+    }
+  }
+}

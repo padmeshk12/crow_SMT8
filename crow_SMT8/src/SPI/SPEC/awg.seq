@@ -1,0 +1,11 @@
+
+sequence awg uses SPI.SPEC.awg{
+
+
+
+             sequential action1 {
+               actionCall Source_Waveform;
+//               actionCall voltMeas1 IO_0;
+
+}
+}
