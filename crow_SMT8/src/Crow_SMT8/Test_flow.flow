@@ -1,0 +1,20 @@
+flow Test_flow {
+
+    setup {
+        suite CONTINUITY calls Crow_SMT8.test_method.Continuity { bypass = true;}
+        suite IVDDFL_IVINFL_RONFL calls Crow_SMT8.test_method.RON_200mA { bypass = true;}
+        suite SlowTrip calls Crow_SMT8.test_method.slow_trip_without_testmode{bypass = true;}
+        suite Vreftrim calls Crow_SMT8.test_method.Vreftrim  {bypass = true;}
+        suite Post_SS_Test calls Crow_SMT8.test_method.Post_SSCurrent_Test  {bypass = true;}
+         suite TISLOW calls Crow_SMT8.test_method.TISLOW  {bypass = false;}
+    }
+
+    execute {
+        CONTINUITY.execute();
+        IVDDFL_IVINFL_RONFL.execute();
+        SlowTrip.execute();
+        Vreftrim.execute();
+        Post_SS_Test.execute();
+        TISLOW.execute();
+    }
+}
